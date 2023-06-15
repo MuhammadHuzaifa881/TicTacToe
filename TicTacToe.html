@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css
+    ">
+</head>
+<body>
+    <h1 class="text-center">Tic Tac Toe</h1>
+    <div class="restart">
+        <button style="border-radius: 2rem;">Restart</button>
+        <button style="border-radius: 2rem;" id="resetScoreBtn">Reset</button>
+    </div>
+    <div class="GameResultBoard">
+        <div>
+            <label style="padding-left: 10rem;">Player 1</label><br>
+            <label>Score:</label>
+            <input type="number" id="Player1-score" style="margin-left: 5rem;" placeholder="Total Game Score" disabled></input><br>
+            <label >Result:</label>
+            <input id="Player1-result" placeholder="Game Result" style="margin-left: 4.7rem;margin-top: 0.5rem;"  disabled></input><br>
+            <label >Game Played:</label>
+            <input id="Player1-totalGamePlayed" placeholder="Total Game Played" style="margin-left: 1.7rem;margin-top: 0.5rem;" disabled></input><br>
+            <label>Win Percentage</label>
+            <input id="Player1-WinStrike" placeholder="Win Strike" style="margin-left: 0.6rem;margin-top: 0.5rem;" disabled></input><br>
+            <label>Win:</label>
+            <input id="Player1-totalgameWon" placeholder="Total Game won" style="margin-left: 5.57rem;margin-top: 0.5rem;" disabled></input><br>
+            <label>Loss:</label>
+            <input id="Player1-totalgameloss" placeholder="Total Game Loss" style="margin-left: 5.4rem;margin-top: 0.5rem;" disabled></input>
+        </div>
+        <div class="">
+            <div class="board">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+        </div>
+        <div>
+            <label style="padding-left: 10rem;">Player 2</label><br>
+            <label>Score:</label>
+            <input id="Player2-score" placeholder="Total Game Score" style="margin-left: 5.57rem;" disabled></input><br>
+            <label>Result</label>
+            <input id="Player2-result" placeholder="Game Result" style="margin-left: 5.6rem;margin-top: 0.5rem;" disabled></input><br>
+            <label>Game Played</label>
+            <input id="Player2-totalGamePlayed" placeholder="Total Game Played" style="margin-left: 2.55rem;margin-top: 0.5rem;" disabled></input><br>
+            <label>Win Percentage</label>
+            <input id="Player2-WinStrike" placeholder="Win Strike" style="margin-left: 1.4rem;margin-top: 0.5rem;" disabled></input><br>
+            <label>Win:</label>
+            <input id="Player2-totalgameWon" placeholder="Total Game Won" style="margin-left: 6.5rem;margin-top: 0.5rem;" disabled></input><br>
+            <label>Game Loss</label>
+            <input id="Player2-totalgameloss" placeholder="Total Game Loss" style="margin-left: 3.7rem;margin-top: 0.5rem;" disabled></input><br>
+        </div>
+    </div>
+   
+    <script src="tictaktoe.js"></script>
+</body>
+</html>

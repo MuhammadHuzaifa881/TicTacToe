@@ -9,7 +9,7 @@
 <body>
     <h1 class="text-center">Tic Tac Toe</h1>
     <div class="restart">
-        <button style="border-radius: 2rem;">Restart</button>
+        <button style="border-radius: 2rem;" class="restartbtn">Restart</button>
         <button style="border-radius: 2rem;" id="resetScoreBtn">Reset</button>
     </div>
     <div class="GameResultBoard">
@@ -18,15 +18,15 @@
             <label>Score:</label>
             <input type="number" id="Player1-score" style="margin-left: 5rem;" placeholder="Total Game Score" disabled></input><br>
             <label >Result:</label>
-            <input id="Player1-result" placeholder="Game Result" style="margin-left: 4.7rem;margin-top: 0.5rem;"  disabled></input><br>
+            <input type="text" id="Player1-result" placeholder="Game Result" style="margin-left: 4.7rem;margin-top: 0.5rem;"  disabled></input><br>
             <label >Game Played:</label>
-            <input id="Player1-totalGamePlayed" placeholder="Total Game Played" style="margin-left: 1.7rem;margin-top: 0.5rem;" disabled></input><br>
+            <input type="number" id="Player1-totalGamePlayed" placeholder="Total Game Played" style="margin-left: 1.7rem;margin-top: 0.5rem;" disabled></input><br>
             <label>Win Percentage</label>
-            <input id="Player1-WinStrike" placeholder="Win Strike" style="margin-left: 0.6rem;margin-top: 0.5rem;" disabled></input><br>
+            <input type="number" id="Player1-WinStrike" placeholder="Win Strike" style="margin-left: 0.6rem;margin-top: 0.5rem;" disabled></input><br>
             <label>Win:</label>
-            <input id="Player1-totalgameWon" placeholder="Total Game won" style="margin-left: 5.57rem;margin-top: 0.5rem;" disabled></input><br>
+            <input type="number" id="Player1-totalgameWon" placeholder="Total Game won" style="margin-left: 5.57rem;margin-top: 0.5rem;" disabled></input><br>
             <label>Loss:</label>
-            <input id="Player1-totalgameloss" placeholder="Total Game Loss" style="margin-left: 5.4rem;margin-top: 0.5rem;" disabled></input>
+            <input type="number" id="Player1-totalgameloss" placeholder="Total Game Loss" style="margin-left: 5.4rem;margin-top: 0.5rem;" disabled></input>
         </div>
         <div class="">
             <div class="board">

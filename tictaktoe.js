@@ -112,7 +112,7 @@ function checkDraw() {
 
   player1Result = "Draw";
   player2Result = "Draw";
-  updateGameResult();
+  // updateGameResult();
   restartGame();
 }
 
@@ -120,22 +120,31 @@ function checkDraw() {
 function updateGameResult() {
   player1ResultInput.value = player1Result;
   player2ResultInput.value = player2Result;
-  player1TotalGamesPlayed +=1;
+  // player 1 game played increment
+  player1TotalGamesPlayed = player1TotalGamesPlayed++;
   player1TotalGamesPlayedInput.value = player1TotalGamesPlayed;
-  player2TotalGamesPlayed +=1;
-  player2TotalGamesPlayedInput.value = player2TotalGamesPlayed;
   player1TotalGameWonInput.value = player1TotalGameWon;
-  player2TotalGameWonInput.value = player2TotalGameWon;
   player1TotalGameLossInput.value = player1TotalGameLoss;
+
+  // player 2 game played increment
+  player2TotalGamesPlayed = player2TotalGamesPlayed++;
+  player2TotalGamesPlayedInput.value = player2TotalGamesPlayed;
+  player2TotalGameWonInput.value = player2TotalGameWon;
   player2TotalGameLossInput.value = player2TotalGameLoss;
 }
 
 // Function to update the score fields
 function updateScore() {
-  player1Score = player1TotalGameWon - player1TotalGameLoss;
-  player2Score = player2TotalGameWon - player2TotalGameLoss;
-  player1ScoreInput.value = player1Score;
+  if(player1Result=="Win"){
+    player1Score=player1Score+50;
+    player1ScoreInput.value = player1Score;
+  }
+  else if(player2Result=="Win"){
+    player2Score=player2Score+50;
   player2ScoreInput.value = player2Score;
+  }
+  // player1Score = player1TotalGameWon - player1TotalGameLoss;
+  // player2Score = player2TotalGameWon - player2TotalGameLoss;
 }
 
 // Function to restart the game
@@ -146,11 +155,16 @@ function restartGame() {
   currentPlayer = 1;
   player1Result = "";
   player2Result = "";
-  updateGameResult();
+  // player 1 increment
+  player1TotalGamesPlayed = player1TotalGamesPlayed + 1;
+  player1TotalGamesPlayedInput.value = player1TotalGamesPlayed;
+  // player 2 increment
+  player2TotalGamesPlayed = player2TotalGamesPlayed + 1;
+  player2TotalGamesPlayedInput.value = player2TotalGamesPlayed;
+  // updateGameResult();
   updateWinPercentage();
 }
 
-// Win Percentage
 // Win Percentage
 function updateWinPercentage() {
   const player1WinPercentage = calculateWinPercentage(player1TotalGameWon, player1TotalGamesPlayed);
@@ -179,7 +193,7 @@ function resetScore() {
   player2TotalGameWon = 0;
   player1TotalGameLoss = 0;
   player2TotalGameLoss = 0;
-  updateGameResult();
-  updateScore();
-  updateWinPercentage();
+  // updateGameResult();
+  // updateScore();
+  // updateWinPercentage();
 }
